@@ -57,7 +57,7 @@ public class SoldadoController {
 
     @GetMapping
     public ResponseEntity<List<Soldado>> buscarSoldado(){
-        List<Soldado> soldados = soldadoService.buscarSoldado();
+        List<Soldado> soldados = soldadoService.buscarSoldados();
         return ResponseEntity.status(HttpStatus.OK).body(soldados);
     }
 }
