@@ -1,5 +1,6 @@
 package com.digitalinnovationone.aula03.service;
 
+import com.digitalinnovationone.aula03.controller.request.SoldadoEditRequest;
 import com.digitalinnovationone.aula03.dto.Soldado;
 
 public class SoldadoService {
@@ -11,4 +12,7 @@ public class SoldadoService {
         soldado.setArma("Arco e flexa");
         return soldado;
     }
+    public void criarSoldado(Soldado soldado){}
+
+    public void alterarSoldado(String cpf, SoldadoEditRequest soldadoEditRequest){}
 }
