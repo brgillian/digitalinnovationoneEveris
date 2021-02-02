@@ -1,20 +1,20 @@
-package com.digitalinnovationone.aula03.dto;
+package com.digitalinnovationone.aula03.entity;
 
-public class Soldado {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class SoldadoEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String cpf;
     private String nome;
     private String raca;
     private String arma;
     private String status;
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public Long getId() {
         return id;
@@ -32,12 +32,12 @@ public class Soldado {
         this.cpf = cpf;
     }
 
-    public String getArma() {
-        return arma;
+    public String getNome() {
+        return nome;
     }
 
-    public void setArma(String arma) {
-        this.arma = arma;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getRaca() {
@@ -48,6 +48,14 @@ public class Soldado {
         this.raca = raca;
     }
 
+    public String getArma() {
+        return arma;
+    }
+
+    public void setArma(String arma) {
+        this.arma = arma;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -55,5 +63,4 @@ public class Soldado {
     public void setStatus(String status) {
         this.status = status;
     }
-
 }
