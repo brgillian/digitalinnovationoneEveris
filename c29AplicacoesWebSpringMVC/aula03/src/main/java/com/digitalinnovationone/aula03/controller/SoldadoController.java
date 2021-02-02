@@ -9,6 +9,7 @@ import com.digitalinnovationone.aula03.service.SoldadoService;
 import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -56,7 +57,7 @@ public class SoldadoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Soldado>> {
+    public ResponseEntity<List<Soldado>> buscarSoldado(){
         List<Soldado> soldados = soldadoService.buscarSoldado();
         return ResponseEntity.status(HttpStatus.OK).body(soldados);
     }
