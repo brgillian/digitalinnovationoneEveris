@@ -1,5 +1,7 @@
 package com.digitalinnovationone.aula03.controller;
 
+import java.util.List;
+
 import com.digitalinnovationone.aula03.controller.request.SoldadoEditRequest;
 import com.digitalinnovationone.aula03.dto.Soldado;
 import com.digitalinnovationone.aula03.service.SoldadoService;
@@ -51,5 +53,11 @@ public class SoldadoController {
     public ResponseEntity deletarSoldado(@PathVariable String cpf){
         soldadoService.deletarSoldado(cpf);
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Soldado>> {
+        List<Soldado> soldados = soldadoService.buscarSoldado();
+        return ResponseEntity.status(HttpStatus.OK).body(soldados);
     }
 }
