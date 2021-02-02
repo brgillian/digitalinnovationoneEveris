@@ -15,4 +15,6 @@ public class SoldadoService {
     public void criarSoldado(Soldado soldado){}
 
     public void alterarSoldado(String cpf, SoldadoEditRequest soldadoEditRequest){}
+
+    public void deletarSoldado(String cpf){}
 }
