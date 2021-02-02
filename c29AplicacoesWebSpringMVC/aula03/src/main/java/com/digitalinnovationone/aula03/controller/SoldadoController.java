@@ -6,7 +6,6 @@ import com.digitalinnovationone.aula03.controller.request.SoldadoEditRequest;
 import com.digitalinnovationone.aula03.dto.Soldado;
 import com.digitalinnovationone.aula03.service.SoldadoService;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -36,13 +35,13 @@ public class SoldadoController {
     }
 
     @PostMapping
-    public ResponseEntity criarSoldado(@RequestBody Soldado soldado){
+    public ResponseEntity<Soldado> criarSoldado(@RequestBody Soldado soldado){
         soldadoService.criarSoldado(soldado);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PutMapping("/{cpf}")
-    public ResponseEntity editarSoldado(@PathVariable() String cpf,
+    public ResponseEntity<Soldado> editarSoldado(@PathVariable() String cpf,
                                         @RequestBody SoldadoEditRequest soldadoEditRequest){
         
         soldadoService.alterarSoldado(cpf, soldadoEditRequest);
@@ -51,7 +50,7 @@ public class SoldadoController {
     }
 
     @DeleteMapping("/{cpf}")
-    public ResponseEntity deletarSoldado(@PathVariable String cpf){
+    public ResponseEntity<Soldado> deletarSoldado(@PathVariable String cpf){
         soldadoService.deletarSoldado(cpf);
         return ResponseEntity.ok().build();
     }
