@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/v1/soldado")
@@ -28,7 +29,7 @@ public class SoldadoController {
     }
 
     @PostMapping
-    public ResponseEntity criarSoldado(@ResquestBody Soldado soldado){
+    public ResponseEntity criarSoldado(@RequestBody Soldado soldado){
         return null;
     }
 }
