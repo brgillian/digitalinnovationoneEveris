@@ -1,12 +1,21 @@
 package com.digitalinnovationone.aula03.dto;
 
 public class Soldado {
+    private String cpf;
     private String nome;
     private String raca;
     private String arma;
 
     public String getNome() {
         return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getArma() {
