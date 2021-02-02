@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SoldadoRepostory extends JpaRepository<SoldadoEntity, Long> {
+public interface SoldadoRepository extends JpaRepository<SoldadoEntity, Long> {
     
 }

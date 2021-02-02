@@ -2,6 +2,7 @@ package com.digitalinnovationone.aula03.controller.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 public class SoldadoListResponse extends ResourceSupport {
     private Long id;
     private String cpf;
