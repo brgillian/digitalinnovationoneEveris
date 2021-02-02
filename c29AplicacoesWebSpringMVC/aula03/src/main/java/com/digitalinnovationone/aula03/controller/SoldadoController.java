@@ -30,6 +30,7 @@ public class SoldadoController {
 
     @PostMapping
     public ResponseEntity criarSoldado(@RequestBody Soldado soldado){
-        return null;
+        soldadoService.criarSoldado(soldado);
+        return ResponseEntity.ok().build();
     }
 }
