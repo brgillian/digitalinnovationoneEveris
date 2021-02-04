@@ -54,7 +54,6 @@ public class SoldadoController {
         
         soldadoService.alterarSoldado(id, soldadoEditRequest);
         return ResponseEntity.ok().build();
-
     }
 
     @DeleteMapping("/{id}")

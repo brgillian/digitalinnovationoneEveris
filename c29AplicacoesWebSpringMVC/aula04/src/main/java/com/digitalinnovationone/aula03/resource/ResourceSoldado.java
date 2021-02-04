@@ -5,7 +5,7 @@ import com.digitalinnovationone.aula03.controller.response.SoldadoListResponse;
 import com.digitalinnovationone.aula03.entity.SoldadoEntity;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.springframework.hateoas.Link;
+import org.springframework.hateoas.Links;
 import org.springframework.stereotype.Component;
 
 
@@ -26,7 +26,7 @@ public class ResourceSoldado {
 
     public SoldadoListResponse criarLinkDetalhe(SoldadoEntity soldadoEntity){
         SoldadoListResponse soldadoListResponse = objectMapper.convertValue(soldadoEntity, SoldadoListResponse.class);
-        soldadoEntity.getStatus()
+        soldadoEntity.getStatus();
         Link link = linkTo(methodOn(SoldadoController.class).deletarSoldado(soldadoEntity.getId())).whithSelfRel();
         soldadoListResponse.add(link);
         return soldadoListResponse;

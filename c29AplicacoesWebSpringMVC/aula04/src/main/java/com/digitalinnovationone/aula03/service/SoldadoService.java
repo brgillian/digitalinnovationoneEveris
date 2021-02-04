@@ -11,7 +11,9 @@ import com.digitalinnovationone.aula03.entity.SoldadoEntity;
 import com.digitalinnovationone.aula03.repostory.SoldadoRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+//import org.springframework.hateoas.Resources;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class SoldadoService {

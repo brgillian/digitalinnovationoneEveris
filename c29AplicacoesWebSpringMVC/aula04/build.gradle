@@ -13,12 +13,12 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-web'	
-	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 	//Hateoas
-	implementation 'org.springframework.hateoas:spring-hateoas'
+	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 	implementation 'org.springframework.plugin:spring-plugin-core'
 
 	//Banco de Dados
@@ -27,7 +27,7 @@ dependencies {
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
-
+/*
 test {
 	useJUnitPlatform()
-}
+}*/
